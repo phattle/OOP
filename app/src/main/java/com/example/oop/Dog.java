@@ -1,5 +1,7 @@
 package com.example.oop;
 
+import androidx.annotation.NonNull;
+
 public class Dog extends Animal{
 
     public Dog(String name, Integer weight) {
@@ -9,6 +11,11 @@ public class Dog extends Animal{
 
     @Override
     public String getName() {
-        return super.getName();
+        return "Dog";
+    }
+
+    @Override
+    public void setName(@NonNull String name) {
+        super.setName(name);
     }
 }
