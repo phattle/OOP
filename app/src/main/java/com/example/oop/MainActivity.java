@@ -11,12 +11,14 @@ public class MainActivity extends AppCompatActivity {
 
     final int a = 5;
     static int b = 10;
+    final int[] mangB={1,2,3,4,5,6,7,8,9,10};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        khong lấy biến final gán thành giá trị khác
 //        tính chất
 //        tính kế thừa
 //        quan hệ has A
@@ -70,9 +72,11 @@ public class MainActivity extends AppCompatActivity {
 //    public void showToast(Boolean aBoolean){
 //        Toast.makeText(this, aBoolean + "", Toast.LENGTH_SHORT).show();
 //    }
+        mangB[0]=5;
+        Log.d("BBB", mangB[0]+"");
+//        Dog dog = new Dog("kiki", 5);
+//        Log.d("BBB", dog.getName());
 
-        Dog dog = new Dog("kiki", 5);
-        dog.setName();
-        Log.d("BBB", dog.getName());
+        Animal.Builder builder = Animal.Builder.createBuilder();
     }
 }
